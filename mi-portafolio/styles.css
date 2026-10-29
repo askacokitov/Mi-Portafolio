@@ -1,0 +1,212 @@
+:root {
+    --bg-color: #0f172a;          
+    --card-bg: #1e293b;          
+    --accent-color: #38bdf8;      
+    --accent-hover: #0284c7;     
+    --text-primary: #f8fafc;      
+    --text-secondary: #94a3b8;   
+    --border-color: #334155;      
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    padding: 0 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.15);
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    letter-spacing: -0.5px;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+section, #presentación {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    position: relative;
+    display: inline-block;
+}
+
+p em strong {
+    display: block;
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    background-color: rgba(56, 189, 248, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+#experiencia ul {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#experiencia li {
+    background-color: var(--card-bg);
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+#experiencia li strong {
+    color: var(--text-primary);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+caption {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    font-weight: normal;
+}
+
+thead th {
+    background-color: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr th {
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:last-child th {
+    border-bottom: none;
+}
+
+table img {
+    border-radius: 6px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button[type="submit"] {
+    background-color: var(--accent-color);
+    color: #0f172a;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-hover);
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 2.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none; 
+    }
+
+    tbody tr {
+        margin-bottom: 1.5rem;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    tbody tr th {
+        border-bottom: none;
+        padding: 0.5rem 0;
+    }
+}

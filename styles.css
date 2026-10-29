@@ -165,7 +165,8 @@ table img {
     display: block;
 }
 
-button[type="submit"] {
+
+button[type="button"] {
     background-color: var(--accent-color);
     color: #0f172a;
     border: none;
@@ -176,7 +177,7 @@ button[type="submit"] {
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-button[type="submit"]:hover {
+button[type="button"]:hover {
     background-color: var(--accent-hover);
     color: #ffffff;
 }
